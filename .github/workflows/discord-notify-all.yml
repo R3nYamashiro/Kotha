@@ -1,0 +1,45 @@
+name: "Discord Notify — All events"
+
+on:
+  push: {}
+  pull_request: {}
+  issues: {}
+  issue_comment: {}
+  pull_request_review_comment: {}
+  release: {}
+  workflow_run:
+    types: [completed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build notification payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo="${{ github.repository }}"
+          actor="${{ github.actor }}"
+          event_name="${{ github.event_name }}"
+          action="$(jq -r '.action // ""' "$GITHUB_EVENT_PATH")"
+          title="$(jq -r '.head_commit.message // .pull_request.title // .issue.title // .release.name // .workflow_run.name // ""' "$GITHUB_EVENT_PATH")"
+          url="$(jq -r '.pull_request.html_url // .issue.html_url // .release.html_url // .workflow_run.html_url // .head_commit.url // ""' "$GITHUB_EVENT_PATH")"
+
+          # Trim empty lines
+          title="$(echo "$title" | sed '/^$/d' | head -n1 || true)"
+          url="$(echo "$url" | sed '/^$/d' | head -n1 || true)"
+
+          # Compose message
+          header="[${repo}] ${event_name} by ${actor}"
+          if [ -n "$action" ]; then header="$header ($action)"; fi
+          body=""
+          if [ -n "$title" ]; then body="$title"; fi
+          if [ -n "$url" ]; then body="$body\n$url"; fi
+
+          content="$header"
+          if [ -n "$body" ]; then content="$content\n\n$body"; fi
+
+          jq -n --arg c "$content" '{content: $c}' > payload.json
+      - name: Send to Discord
+        run: |
+          curl -s -H "Content-Type: application/json" -d @payload.json "${{ secrets.DISCORD_WEBHOOK }}"
