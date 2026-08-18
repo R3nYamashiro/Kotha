@@ -1,7 +1,7 @@
 {
-  "name": "discordbot",
+  "name": "kotha",
   "version": "11.0.0",
-  "description": "Discord Bot is a bot with which you can run your entire server! With no less than 400+ commands",
+  "description": "Kotha Bot is a bot with which you can run your entire server! With no less than 400+ commands",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,8 +24,8 @@
     "Suggestions",
     "Server Stats"
   ],
-  "author": "uo1428",
-  "license": "ISC",
+  "author": "Mizu キ",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/voice": "^0.16.0",
     "@haileybot/captcha-generator": "^1.7.0",
