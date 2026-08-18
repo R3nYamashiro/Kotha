@@ -23,14 +23,14 @@ module.exports = async (client, interaction, args) => {
                     },
                     {
                         name: `❓┆What can I do here?`,
-                        value: `- Meet new people! \n- Play many fun games! \n- Discover the seasons! \n- Participate in events! \nAnd…. Last but not least, choose your own roles at <#847867992044994561>!`,
+                        value: `- Meet new people! \n- Play many fun games! \n- Discover the seasons! \n- Participate in events! \nAnd…. Last but not least, choose your own roles at <#1527881668516515860>!`,
                     },
                     {
                         name: `🎫┆How do I get help when needed?`,
-                        value: `You can make a ticket in <#820308164322656327>! We are happy to help you with your questions here and offer support in your server!`,
+                        value: `You can make a ticket in <#1539190859377942621>! We are happy to help you with your questions here and offer support in your server!`,
                     },
                     {
-                        name: `⚙️┆I want to help Bot Hangout to improve!`,
+                        name: `⚙️┆I want to help kotha to improve!`,
                         value: `- Go to applications and see what kind of jobs are available! \n- Or make a ticket and ask if you can help with certain things! \n\n**We wish you a very nice and happy time here!**`,
                     }
                 ]
@@ -110,8 +110,8 @@ module.exports = async (client, interaction, args) => {
                 desc: `_____ \n\nWhat could be more fun than working at the best bot/server? We regularly have spots for new positions that you can apply for \n\nBut... what can you expect?`,
                 fields: [
                     {
-                        name: `👥┆A very nice team`,
-                        value: `In the Bot team there is always a pleasant atmosphere and everyone is treated equally!`,
+                        name: `👥┆A very nerd team`,
+                        value: `In the dev team there is always a pleasant atmosphere and everyone is treated equally! probably xd`,
                     },
                     {
                         name: `🥳┆Access to the beta program`,
@@ -123,7 +123,7 @@ module.exports = async (client, interaction, args) => {
                     },
                     {
                         name: `📖┆Learn and grow`,
-                        value: `We understand that you don't always understand everything right away! At Bot, we give you the opportunity to learn new things and get better at the position. You can also grow into the management team in the future!`,
+                        value: `We understand that you don't always understand everything right away! At kotha, we give you the opportunity to learn new things and get better at the position. You can also grow into the management team in the future!`,
                     },
                     {
                         name: `📘┆What does everything mean?`,
@@ -246,12 +246,12 @@ module.exports = async (client, interaction, args) => {
                 desc: `_____ \n\nOutside of a community we also maintain 2 public bots. These bots are all made to make your server better!`,
                 fields: [
                     {
-                        name: `📘┆What is Bot?`,
-                        value: `Bot is a bot with which you can run your entire server! With no less than 400+ commands, we have a large bot with many options to improve your server! You know what else is beautiful? All of this is **FREE** to use!`,
+                        name: `📘┆What is kotha?`,
+                        value: `kotha is a bot with which you can run your entire server! With no less than 400+ commands, we have a large bot with many options to improve your server! You know what else is beautiful? All of this is **FREE** to use!`,
                     },
                     {
-                        name: `🎶┆What is Bot 2?`,
-                        value: `Bot 2 was created for additional music. This way you never get in each other's way when someone is already listening to music. Furthermore, this bot contains a soundboard and a radio system`,
+                        name: `🎶┆What is Konata?`,
+                        value: `Konata was created for additional music. This way you never get in each other's way when someone is already listening to music. Furthermore, this bot contains a soundboard and a radio system`,
                     },
                     {
                         name: `📨┆How do I invite the bots?`,
@@ -259,7 +259,7 @@ module.exports = async (client, interaction, args) => {
                     },
                     {
                         name: `🎫┆How do I get help when needed?`,
-                        value: `You can make a ticket in <#820308164322656327>! We are happy to help you with your questions here and offer support in your server!`,
+                        value: `You can make a ticket in <#1539190859377942621>! We are happy to help you with your questions here and offer support in your server!`,
                     }
                 ]
             }, interaction.channel)
